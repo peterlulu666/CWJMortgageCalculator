@@ -8,8 +8,6 @@ public class CWJMortgageCalculator {
     final static byte Percent = 100;
 
     public static void main(String[] args) {
-
-
         int principal = (int) ReadNumber("principal: ", 1000, 1_000_000);
         float Annual_interest = (float) ReadNumber("Annual_interest: ", 1, 30);
         int years = (int) ReadNumber("yeas: ", 1, 30);
