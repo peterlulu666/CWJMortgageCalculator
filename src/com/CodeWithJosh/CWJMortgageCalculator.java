@@ -39,7 +39,7 @@ public class CWJMortgageCalculator {
 
     public static double ReadNumber(String promt, double min, double max) {
         Scanner scanner = new Scanner(System.in);
-        double value = 0;
+        double value;
         while (true) {
             System.out.println(promt);
             value = scanner.nextDouble();
@@ -57,8 +57,7 @@ public class CWJMortgageCalculator {
         float Number_of_Payment = years * Month_in_year;
         float Monthly_Interest = (Annual_interest / Percent) / Month_in_year;
 
-        double Balance = principal *
-                (Math.pow(1 + Monthly_Interest, Number_of_Payment) - Math.pow(1 + Monthly_Interest, Number_of_Payment_Made)) /
+        double Balance = principal * (Math.pow(1 + Monthly_Interest, Number_of_Payment) - Math.pow(1 + Monthly_Interest, Number_of_Payment_Made)) /
                 (Math.pow(1 + Monthly_Interest, Number_of_Payment) - 1);
 
         return Balance;
@@ -71,8 +70,7 @@ public class CWJMortgageCalculator {
         float Number_of_Payment = years * Month_in_year;
         float Monthly_Interest = (Annual_interest / Percent) / Month_in_year;
 
-        double Mortgage = principal *
-                (Monthly_Interest * Math.pow(1 + Monthly_Interest, Number_of_Payment)) /
+        double Mortgage = principal * (Monthly_Interest * Math.pow(1 + Monthly_Interest, Number_of_Payment)) /
                 (Math.pow(1 + Monthly_Interest, Number_of_Payment) - 1);
         return Mortgage;
     }
