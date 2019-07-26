@@ -2,17 +2,17 @@ package com.CodeWithJosh;
 
 import java.util.Scanner;
 
-public class Concole {
+public class Console {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static double ReadNumber(String primt) {
+    public static double ReadNumber(String prompt) {
         return scanner.nextDouble();
     }
 
-    public static double ReadNumber(String promt, double min, double max) {
+    public static double ReadNumber(String prompt, double min, double max) {
         double value;
         while (true) {
-            System.out.println(promt);
+            System.out.println(prompt);
             value = scanner.nextDouble();
             if (value >= min && value <= max)
                 break;
