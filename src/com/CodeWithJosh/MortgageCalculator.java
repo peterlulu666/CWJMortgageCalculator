@@ -1,6 +1,5 @@
 package com.CodeWithJosh;
 
-import java.text.NumberFormat;
 
 public class MortgageCalculator {
     private final static byte Month_in_year = 12;
@@ -10,6 +9,13 @@ public class MortgageCalculator {
     private float Annual_interest;
     private int years;
 
+
+    public MortgageCalculator(int principal, float annual_interest, int years) {
+        this.principal = principal;
+        this.Annual_interest = annual_interest;
+        this.years = years;
+    }
+
     public double[] getRemainingBalance() {
         var balances = new double[getNumber_of_payment()];
         for (var month = 1; month <= getNumber_of_payment(); month++) {
@@ -18,12 +24,6 @@ public class MortgageCalculator {
         }
         return balances;
 
-    }
-
-    public MortgageCalculator(int principal, float annual_interest, int years) {
-        this.principal = principal;
-        this.Annual_interest = annual_interest;
-        this.years = years;
     }
 
     public double CalculateBalance(double Number_of_Payment_Made) {
