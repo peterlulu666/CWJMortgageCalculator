@@ -15,7 +15,6 @@ public class CWJMortgageCalculator {
         report.PrintMortgage();
 
 
-
     }
 
 }

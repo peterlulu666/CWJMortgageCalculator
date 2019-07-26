@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Concole {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static double ReadNumber(String primt){
+    public static double ReadNumber(String primt) {
         return scanner.nextDouble();
     }
 
